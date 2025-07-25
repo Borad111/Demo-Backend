@@ -64,6 +64,7 @@ export class UserController {
           res.cookie('token',token,{
             httpOnly:true,
             sameSite: 'strict',
+            secure:true,
             maxAge:24*60*60*1000  
           });
           UtilsService.ReS(res,{message:"User Login sucessfully",user},200);
