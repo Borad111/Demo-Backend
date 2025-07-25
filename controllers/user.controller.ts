@@ -63,7 +63,7 @@ export class UserController {
           const token=jwtUtils.generateToken({id:user?.id,email:user?.email});
           res.cookie('token',token,{
             httpOnly:true,
-            sameSite: 'strict',
+            sameSite: 'none',
             secure:true,
             maxAge:24*60*60*1000  
           });
