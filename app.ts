@@ -13,7 +13,7 @@ dotenv.config();
 
 app.use(express.json());
 app.use(cors({
-    origin:"http://localhost:3000",
+    origin:"https://demo-frontend-plum.vercel.app",
     credentials:true
 }));
 app.use(cookieParser());
